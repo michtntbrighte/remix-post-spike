@@ -1,40 +1,11 @@
-# Welcome to Remix!
+## About
 
-- 📖 [Remix docs](https://remix.run/docs)
+just small spike to see if it is possible through remix to accept POST request from other source, was having tough time actually to figure it out.
 
-## Development
+## Cogo
+Ideally is in COGO side they will send `POST` request with their data, can be done through fetch; and after that they redirect back to our marketplace url
+<img width="1394" alt="Screenshot 2024-07-29 at 11 14 20 am" src="https://github.com/user-attachments/assets/84b6d60a-493c-4b12-95d5-cc0680fbaab0">
 
-Run the dev server:
-
-```shellscript
-npm run dev
-```
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+## Brighte Marketplace
+Ideally we consume what they provide through cookies (i havent yet figured out if theres another way as usually sending data to other url is done via query params)
+<img width="654" alt="Screenshot 2024-07-29 at 11 13 56 am" src="https://github.com/user-attachments/assets/90451614-542a-4bce-a6ff-972ead4324bc">
