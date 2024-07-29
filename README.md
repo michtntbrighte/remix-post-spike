@@ -1,3 +1,7 @@
+## About
+
+just small spike to see if it is possible through remix to accept POST request from other source, was having tough time actually to figure it out.
+
 ## Cogo
 Ideally is in COGO side they will send `POST` request with their data, can be done through fetch; and after that they redirect back to our marketplace url
 <img width="1394" alt="Screenshot 2024-07-29 at 11 14 20 am" src="https://github.com/user-attachments/assets/84b6d60a-493c-4b12-95d5-cc0680fbaab0">
