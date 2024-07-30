@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COGO Form Submit</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById('name').value;
+          const solarPanelKw = document.getElementById('solarPanelKw').value;
+
+          const jsonData = JSON.stringify({ name, solarPanelKw });
+
+          document.getElementById('data').value = jsonData;
+
+          form.submit();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <p>COGO view HTML</p>
+      <form
+        action="http://localhost:5173/brighte-marketplace-form-submit"
+        method="POST"
+      >
+        <input type="hidden" id="data" name="data" value="" />
+        <div>
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div>
+          <label htmlFor="solarPanelKw">Solar Panels (kW):</label>
+          <input type="number" id="solarPanelKw" name="solarPanelKw" />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

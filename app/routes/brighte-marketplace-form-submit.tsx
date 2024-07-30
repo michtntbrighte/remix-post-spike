@@ -18,11 +18,13 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
  */
 export const action = async ({ request }: ActionFunctionArgs) => {
   const session = await getSession(request.headers.get('Cookie'));
-  const data = await request.formData();
+  const formData = await request.formData();
+
+  const data = JSON.parse(formData.get('data'));
 
   session.set('cogoPayload', {
-    name: data.get('name'),
-    solarPanelKw: data.get('solarPanelKw'),
+    name: data.name,
+    solarPanelKw: data.solarPanelKw,
   });
 
   return redirect('/brighte-marketplace-form-submit', {
